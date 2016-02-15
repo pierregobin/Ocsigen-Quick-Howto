@@ -39,7 +39,7 @@ let skeletton body_content =
 
 (* Service declaration                                                        *)
 let abc_service =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:["a"; "b"; "c"]
     ~get_params:unit
     ()
@@ -60,7 +60,7 @@ let abc_service_link =
 
 (* Service declaration                                                        *)
 let you_service =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:["you"]
     ~get_params:(string "name" ** int "age")
     ()
@@ -86,7 +86,7 @@ let you_service_link =
 
 (* Service declaration                                                        *)
 let user_service =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:["user"]
     ~get_params:(suffix (string "username"))
     ()
@@ -116,7 +116,7 @@ let user_service_link =
 
 (* Service declaration                                                        *)
 let multiple_service =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:["multiple"]
     ~get_params:(string "a_string"
 		 ** int "an_int"
@@ -161,7 +161,7 @@ let multiple_service_link =
 
 (* Service declaration                                                        *)
 let any_service =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:["any"]
     ~get_params:any
     ()
@@ -190,7 +190,7 @@ let any_service_link =
 
 (* Service declaration                                                        *)
 let list_service =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:["list"]
     ~get_params:(set string "a_list")
     ()
@@ -250,7 +250,7 @@ end
 
 (* Service declaration                                                        *)
 let my_type_service =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:["profile"]
     ~get_params:(user_type
 		   ~of_string:Profile.of_string
@@ -285,7 +285,7 @@ let my_type_service_link =
 
 (* Service declaration                                                        *)
 let main_service =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:[]
     ~get_params:unit
     ()
