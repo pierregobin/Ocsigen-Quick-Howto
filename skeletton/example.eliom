@@ -24,19 +24,19 @@ module Example =
 (* ************************************************************************** *)
 
 let main =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:[""]
     ~get_params:unit
     ()
 
 let lorem =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:["lorem"]
     ~get_params:unit
     ()
 
 let contact =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:["contact"]
     ~get_params:unit
     ()
