@@ -103,7 +103,7 @@ function	launch() {
 	else
 	    trap "echo 'Server killed.'" SIGINT SIGTERM
 	    echo "Launch server..." && \
-		sh -c "sh -c 'ocsigenserver -c example.conf'" && \
+		sh -c "sh -c 'ocsigenserver -V -c example.conf'" && \
 		echo "Done."
 	fi
     fi

@@ -16,7 +16,7 @@ open Eliom_parameter
 module Example =
   Eliom_registration.App
     (struct
-      let application_name = "example"
+      let application_name = "my_user_type"
      end)
 
 (* ************************************************************************** *)

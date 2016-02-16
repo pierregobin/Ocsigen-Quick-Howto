@@ -5,9 +5,11 @@
 (* Latest Version is on GitHub: http://goo.gl/sfvvq                           *)
 (* ************************************************************************** *)
 
+[%%shared
 open Eliom_content
 open Html5.D
 open Eliom_parameter
+]
 
 (* ************************************************************************** *)
 (* Application                                                                *)
@@ -24,21 +26,20 @@ module Example =
 (* ************************************************************************** *)
 
 let main =
-  Eliom_service.service
+  Eliom_service.App.service
     ~path:[]
-    ~get_params:unit
+    ~get_params:Eliom_parameter.unit
     ()
 
 (* ************************************************************************** *)
 (* Js                                                                         *)
 (* ************************************************************************** *)
 
-{client{
+[%%client 
 
 let dummy_js () =
   Dom_html.window##alert(Js.string "Thanks for checking this dummy box!")
 
-}}
   
 (* ************************************************************************** *)
 (* Form                                                                       *)
@@ -81,3 +82,4 @@ let _ =
         (html
            (head (title (pcdata "Call js after form")) [])
            (body [div [display_form ()]])))
+	   ]
