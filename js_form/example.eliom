@@ -60,7 +60,7 @@ let _ =
       (fun check ->
         Lwt.return
           (if check
-           then Eliom_service.onload {{ dummy_js () }})))
+           then Eliom_client.onload {{ dummy_js () }})))
 
 (* HTML5 form element                                                         *)
 let display_form () =

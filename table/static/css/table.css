@@ -1,0 +1,8 @@
+* {
+    font-family: sans-serif;
+}
+table, th, td {
+    border-spacing: 5px;
+    border: 1px solid black;
+}
+
