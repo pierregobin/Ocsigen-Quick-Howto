@@ -20,7 +20,7 @@ let definition_list_example () =
 	        dd [pcdata "verte"]; dd [pcdata "jaune"]; dd [pcdata "rouge"]
 		]
 let my_table () =
-  table ~caption:(caption[pcdata "100%"])
+  table ~caption:(caption[pcdata "100%"]) ~a:(Html5.D.[a_class ["table-striped"]])
   [
   	tr [ td[pcdata "1"]; td[pcdata "2"]; td[pcdata "3"]];
   	tr [ td[pcdata "a"]; td[pcdata "b"]; td[pcdata "c"]];

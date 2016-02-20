@@ -1,8 +1,11 @@
 * {
     font-family: sans-serif;
 }
-table, th, td {
+.table-striped { 
+    width : 100%;
     border-spacing: 5px;
+    border-collapse: collapse;
     border: 1px solid black;
+    background-color: yellow;
 }
 
